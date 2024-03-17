@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
     config.vm.provision "shell", inline: <<-SHELL
     sudo apt update
     sudo apt install -y libncurses5-dev dwarves build-essential bison flex libssl-dev libelf-dev
-	sudo apt -f install
+    sudo apt -f install
     cd /vagrant
     wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.5.tar.gz
     tar -xzf linux-6.5.tar.gz
@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
     make -j4
     sudo make modules_install
     sudo make install
-	cd /vagrant 
+    cd /vagrant 
     rm -r linux-6.5 linux-6.5.tar.gz
     sudo reboot
     SHELL
