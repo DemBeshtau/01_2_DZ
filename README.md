@@ -78,6 +78,10 @@ Vagrant.configure("2") do |config|
   # установка ядра
   sudo make install
 
+  # очистка общей директории
+  cd /vagrant
+  rm -r linux-6.5 linux-6.5.tar.gz
+ 
   # перезагрузка виртуального хоста
   sudo reboot
   SHELL
